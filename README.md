@@ -109,7 +109,7 @@ grep Hello newfile
 ## OUTPUT
 ![alt text](9.png)
 
-cat newfile | grep -i -c "hello"
+cat newfile | grep -i -c "hello"<br>
 cat -w -n world newfile
 
 ## OUTPUT
@@ -144,8 +144,8 @@ Linux is best in this World
 
 
 
-egrep -w '(H|h)ello' newfile1
-egrep -w '(H|h)ell[a-z]' newfile1
+egrep -w '(H|h)ello' newfile1<br>
+egrep -w '(H|h)ell[a-z]' newfile1<br>
 egrep '(^hello)' newfile1
 
 ## OUTPUT
@@ -154,10 +154,10 @@ egrep '(^hello)' newfile1
 
 
 
-egrep '(World$)' newfile1
-egrep '((W|w)orld$)' newfile1
-egrep '[1-9]' newfile1
-egrep 'Linux.*world' newfile1
+egrep '(World$)' newfile1<br>
+egrep '((W|w)orld$)' newfile1 <br>
+egrep '[1-9]' newfile1 <br>
+egrep 'Linux.*world' newfile1 <br>
 egrep 'Linux.*World' newfile1
 ## OUTPUT
 ![alt text](14.png)
@@ -176,17 +176,17 @@ cat > file23
 ^d
 ```
 
-sed -n -e '3p' file23
-sed -n -e '$p' file23
+sed -n -e '3p' file23 <br>
+sed -n -e '$p' file23 <br>
 sed -e 's/Ram/Sita/' file23
 
 
 ## OUTPUT
 ![alt text](15.png)
 
-sed '/tom/s/5000/5000' file23
-sed -n -e '1,5p' file23
-sed -n -e '2,/joe/p' file23
+sed '/tom/s/5000/5000' file23 <br>
+sed -n -e '1,5p' file23 <br>
+sed -n -e '2,/joe/p' file23 <br>
 sed -n -e '/tom/,/joe/p' file23
 
 
@@ -198,16 +198,16 @@ seq 10
 ## OUTPUT
 ![alt text](17.png)
 
-seq 10 | sed -n '4,6p'
-seq 10 | sed -n '2,~4p' 
-seq 3 | sed '2a hello'
+seq 10 | sed -n '4,6p' <br>
+seq 10 | sed -n '2,~4p'  <br>
+seq 3 | sed '2a hello' <br>
 seq 2 | sed '2i hello'
 
 ## OUTPUT
 ![alt text](18.png)
 
-seq 10 | sed '2,9c hello'
-sed -n '2,4{s/^/$/;p}' file23
+seq 10 | sed '2,9c hello' <br>
+sed -n '2,4{s/^/$/;p}' file23 <br>
 sed -n '2,4{s/$/*/;p}' file23
 ## OUTPUT
 
@@ -244,14 +244,14 @@ uniq file22
 
 # Using tr command
 
-cat newfile | tr [:lower:] [:upper:]
+cat newfile | tr [:lower:] [:upper:] <br>
 cat > urllist.txt
 ```
 www. yahoo. com
 www. google. com
 www. mrcet.... com
  ```
-cat urllist.txt | tr -d ' '
+cat urllist.txt | tr -d ' ' <br>
 cat urllist.txt | tr -d ' ' | tr -s '.'
 
 ## OUTPUT
@@ -270,8 +270,8 @@ tar -tvf backup.tar
 ![alt text](24.png)
 
 
-gzip backup.tar
-ls .gz
+gzip backup.tar <br>
+ls .gz <br>
 gunzip backup.tar.gz
 
 ## OUTPUT
@@ -283,7 +283,7 @@ gunzip backup.tar.gz
 echo '#!/bin/sh' > my-script.sh
 echo 'echo Hello World‘; exit 0 >> my-script.sh
 ```
-chmod 755 my-script.sh
+chmod 755 my-script.sh <br>
 ./my-script.sh
 
 ## OUTPUT
@@ -317,8 +317,8 @@ echo 'The $$ is ' $$
 ps
 ^d
  ```
- cat sript.sh
- chmod 777 sript.sh
+ cat sript.sh <br>
+ chmod 777 sript.sh <br>
  ./script.sh 1 2 3
 
 ## OUTPUT
@@ -352,7 +352,7 @@ echo "$val1 is less than $val2"
 fi
 ```
 
-$ chmod 777 stringcmp.sh
+chmod 777 stringcmp.sh <br>
 $ ./stringcmp.sh
 
 ## OUTPUT
@@ -385,7 +385,7 @@ echo “Sorry, you are not the owner of the /etc/passwd file”
 fi
  
  ```
-$ chmod 777 psswperm.sh
+chmod 777 psswperm.sh <br>
 $ ./psswdperm.sh
 ## OUTPUT
 ![alt text](30.png)
@@ -432,7 +432,7 @@ else
 echo “Sorry, the object does not exist”
 fi
 ```
-$ chmod 777 ifnested.sh
+chmod 777 ifnested.sh <br>
 $ ./ifnested.sh 
 
 ## OUTPUT
@@ -476,7 +476,7 @@ echo “The values are different”
 fi
 ```
 
-$ chmod 755 iftest.sh
+chmod 755 iftest.sh <br>
  
 $ ./iftest.sh
 
@@ -506,7 +506,7 @@ echo "Sorry, you are not allowed here"
 fi
 ```
 
-$ chmod 755 elifcheck.sh
+chmod 755 elifcheck.sh <br>
  
 $ ./elifcheck.sh 
 
@@ -525,7 +525,7 @@ else
 echo "I cannot write to the file"
 fi
 ```
-$ chmod 755 ifcompound.sh
+chmod 755 ifcompound.sh <br>
 $ ./ifcompound.sh
 
 ## OUTPUT
@@ -547,7 +547,7 @@ echo "$USER, Do not forget to log off when you're done";;
 echo "Sorry, you are not allowed here";;
 esac
 ```
-$ chmod 777 casecheck.sh 
+chmod 777 casecheck.sh <br>
  
 $ ./casecheck.sh 
 
@@ -584,7 +584,7 @@ echo $var1
 var1=$[ $var1 - 25 ]
 done
 ``` 
-$ chmod 755 untilfunc.sh
+chmod 755 untilfunc.sh <br>
 
 $ ./untilfunc.sh
 
@@ -604,7 +604,7 @@ echo The next state is $test
 done
 ```
  
-$ chmod 777 forign.sh
+chmod 777 forign.sh <br>
 $ ./forign.sh
 
 ## OUTPUT
@@ -619,7 +619,7 @@ do
 echo “word:$test”
 done
 ```
-$ chmod 755 forign2.sh
+chmod 755 forign2.sh <br>
  
 $ ./forign2.sh 
 
@@ -635,7 +635,7 @@ do
 echo "word:$test"
 done
 ```
-$ chmod 777 forign3.sh
+chmod 777 forign3.sh <br>
 $ ./forign3.sh
 
 
@@ -686,7 +686,7 @@ do
 echo "$a - $b"
 done
 ```
-$ chmod 755 forctype.sh
+chmod 755 forctype.sh<br>
 $ ./forctype1.sh 
 
 ## OUTPUT
@@ -706,7 +706,7 @@ echo " Inside loop: $b"
 done
 done
 ```
-$ chmod 755 nestedfor.sh
+chmod 755 nestedfor.sh <br>
  
 $ ./nestedfor.sh
 
@@ -728,7 +728,7 @@ echo "Iteration number: $var1"
 done
 echo "The for loop is completed“
 ```
- $ chmod 777 break.sh
+ chmod 777 break.sh <br>
  $ ./break.sh
 ## OUTPUT
 ![alt text](45.png)
@@ -748,7 +748,7 @@ echo "Iteration number: $var1"
 done
 echo "The for loop is completed“
 ```
-$ chmod 777 forbreak.sh
+chmod 777 forbreak.sh <br>
 $ ./forbreak.sh
 
 ## OUTPUT
@@ -761,7 +761,7 @@ $ ./forbreak.sh
 read -p "Enter your name: " name
 echo "Hello $name, welcome to my program. “
 ``` 
-$ chmod 755 extest.sh 
+chmod 755 extest.sh  <br>
 $ ./extest.sh
 
 ## OUTPUT
@@ -825,6 +825,8 @@ else
 	echo "Number is NOT palindrome"
 fi
 ```
+chmod 777 palindrome.sh <br>
+./palindrome.sh
 ## OUTPUT
 ![alt text](49.png)
 
